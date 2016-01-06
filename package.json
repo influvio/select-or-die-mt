@@ -1,8 +1,8 @@
 {
   "name": "select-or-die-mt",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Select-or-Die =============",
-  "main": "selectordie.js",
+  "main": "_src/selectordie.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
