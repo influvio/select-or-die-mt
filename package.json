@@ -1,6 +1,6 @@
 {
   "name": "select-or-die-mt",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Select-or-Die =============",
   "main": "_src/selectordie.js",
   "scripts": {
