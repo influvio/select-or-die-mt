@@ -63,7 +63,7 @@
                             $sodPrefix                 = "",
                             $sodHtml                   = "",
                             $sodHeight                 = 0,
-                            $sod, $sodListWrapper, $sodList;
+                            $sodWrapper, $sod, $sodListWrapper, $sodList;
 
                         // If there's a prefix defined
                         if ( $settingsPrefix ) {
@@ -77,7 +77,9 @@
                         else {
                             $sodHtml += "<span class=\"sod_label\">" + $sodPrefix + "</span>";
                         }
-
+                        $sodWrapper = $("<div/>", {
+                          "class": "sod_wrapper"
+                        }).insertAfter( this );
                         // Inserts a new element that will act like our new <select>
                         $sod = $("<span/>", {
                             id:                        $settingsId,
@@ -92,7 +94,7 @@
                             "data-placeholder-option": $settingsPlaceholderOption,
                             "data-prefix":             $settingsPrefix,
                             "data-filter":             ""
-                        }).insertAfter( this );
+                        }).appendTo( $sodWrapper );
 
                         // If it's a touch device
                         if ( _private.isTouch() ) {
