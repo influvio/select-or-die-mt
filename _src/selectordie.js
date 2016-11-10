@@ -460,6 +460,8 @@
                     // Clear viewport check timeout
                     clearTimeout($_sodViewportTimeout);
 
+                    if($sod.hasClass("touch")) return;
+
                     // Check the $sod for changes. If the user has used his keys when the SoD was closed
                     // we'll set the currently active option to selected. If the user used his keys when
                     // the SoD was open but did NOT make a selection, then we'll restore the SoD
