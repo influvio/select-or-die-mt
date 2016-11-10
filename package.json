@@ -1,6 +1,6 @@
 {
-  "name": "select-or-die-mt",
-  "version": "1.0.3",
+  "name": "select-or-die-influvio",
+  "version": "1.0.4",
   "description": "Select-or-Die =============",
   "main": "_src/selectordie.js",
   "scripts": {
@@ -8,12 +8,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/drooJohnsonMT/select-or-die-mt.git"
+    "url": "git+https://github.com/influvio/select-or-die-mt.git"
   },
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/drooJohnsonMT/select-or-die-mt/issues"
-  },
-  "homepage": "https://github.com/drooJohnsonMT/select-or-die-mt#readme"
 }
