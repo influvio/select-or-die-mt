@@ -32,7 +32,8 @@
                 linksExternal:     false,     // Boolean  - false by default - Should the options be treated as links and open in a new window/tab?
                 size:              0,         // Integer  - 0 by default - The value set equals the amount of items before scroll is needed
                 tabIndex:          0,         // integer  - 0 by default
-                onChange:          $.noop     // Adds a callback function for when the SoD gets changed
+                onChange:          $.noop,    // Adds a callback function for when the SoD gets changed,
+                onBlur:            $.noop     // Callback for when SoD is closed
             },
             $_settings = {},
             $_sodKeysWhenClosed = false,
@@ -459,6 +460,9 @@
 
                     // Clear viewport check timeout
                     clearTimeout($_sodViewportTimeout);
+
+
+                    $_settings.onBlur.call(this);
 
                     if($sod.hasClass("touch")) return;
 
