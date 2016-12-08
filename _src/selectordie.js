@@ -264,7 +264,10 @@
                     $sodList        = $sod.find(".sod_list"),
                     $sodPlaceholder = $sod.data("placeholder"),
                     $optionActive   = $sod.find(".active"),
-                    $optionSelected = $sod.find(".selected");
+                    $optionSelected = $sod.find(".selected"),
+
+                    $optionSelected = $sod.find(":selected"),
+                    $optionText     = $optionSelected.text();
 
                 // Trigger the SoD if it's not disabled, already open or a touch device
                 if ( !$sod.hasClass("disabled") && !$sod.hasClass("open") && !$sod.hasClass("touch") ) {
@@ -290,7 +293,7 @@
                     // If a placeholder is set, make sure the placeholder text is removed if
                     // the user toggles the select using his mouse
                     if ( $sodPlaceholder ) {
-                        $sod.find(".sod_label").get(0).lastChild.nodeValue = $optionActive.text();
+                      $sod.find(".sod_label").get(0).lastChild.nodeValue = $optionText;
                     }
                 }
             }, // triggerSod
@@ -460,7 +463,6 @@
 
                     // Clear viewport check timeout
                     clearTimeout($_sodViewportTimeout);
-
 
                     $_settings.onBlur.call(this);
 
